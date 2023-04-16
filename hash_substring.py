@@ -37,11 +37,11 @@ def get_occurrences(pattern, text):
     out = []
     
     for i in range (tl - pl + 1):
-        if t = p and text[i:i+p_len] == pattern:
+        if t == p and text[i:i+p_len] == pattern:
             out.append(i)
             
         if i + pl < tl:
-            t = hash(text [i + 1:i + pl + 1])
+            t == hash(text[i + 1:i + pl + 1])
     return out
 
     # and return an iterable variable

@@ -7,9 +7,9 @@ def read_input():
     if inp == 'I':
         pattern = input().rstrip()
         text = input().rstrip()
-        
+
     if inp == 'F':
-        with open("tests/" + "06", 'r') as F:
+        with open("tests/06", 'r') as F:
             pattern = F.readline().rstrip()
             text = F.readline().rstrip()
     return pattern, text
@@ -36,12 +36,13 @@ def get_occurrences(pattern, text):
 
     output = []
     
-    for i in range (tl - pl + 1):
-        if t == p and text[i: i + pl] == pattern:
+    for i in range(tl - pl + 1):
+        if t == p and text[i:i+pl] == pattern:
             output.append(i)
-            
+
         if i + pl < tl:
-            t == hash(text[i + 1: i + pl + 1])
+            t = hash(text[i+1:i+pl+1])
+
     return output
 
     # and return an iterable variable

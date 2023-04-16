@@ -34,15 +34,15 @@ def get_occurrences(pattern, text):
     p = hash(pattern)
     t = hash(text[:pl])
 
-    out = []
+    output = []
     
     for i in range (tl - pl + 1):
         if t == p and text[i: i + pl] == pattern:
-            out.append(i)
+            output.append(i)
             
         if i + pl < tl:
             t == hash(text[i + 1: i + pl + 1])
-    return out
+    return output
 
     # and return an iterable variable
     # return [0]

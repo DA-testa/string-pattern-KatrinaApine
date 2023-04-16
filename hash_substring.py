@@ -9,7 +9,7 @@ def read_input():
         text = input().rstrip()
         
     if inp == 'F':
-        with open("tests/06", 'r') as F:
+        with open("tests/" + "06", 'r') as F:
             pattern = F.readline().rstrip()
             text = F.readline().rstrip()
     return pattern, text
